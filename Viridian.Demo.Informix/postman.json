@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "4c423a56-fe2e-4367-87fd-636d361af7dd",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find users by status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/users/find?status=DRAFT",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"users",
+						"find"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "DRAFT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"status\": \"DRAFT\",\r\n        \"fullname\": \"Mariana Garcia\",\r\n        \"docId\": \"111111\",\r\n        \"enabled\": 1,\r\n        \"birthDate\": \"1980-01-01T00:00:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 5,\r\n        \"status\": \"DRAFT\",\r\n        \"fullname\": \"Mariana Garcia\",\r\n        \"docId\": \"222222\",\r\n        \"enabled\": 1,\r\n        \"birthDate\": \"1980-01-01T00:00:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
