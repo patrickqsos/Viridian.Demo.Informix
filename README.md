@@ -1,8 +1,8 @@
-#Viridian.Demo.Informix
+# Viridian.Demo.Informix
 
 Demo project to interact with a informix database
 
-##Setup:
+## Setup:
 
 - Configure database credentials in appsettings.json
 - Database must accept connections from DRDA clients using port 9089. Netcore uses this port to connect to informix database
